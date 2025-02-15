@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 import org.jenkinsci.Symbol;
 import org.kohsuke.stapler.DataBoundConstructor;
-import org.kohsuke.stapler.StaplerRequest;
+import org.kohsuke.stapler.StaplerRequest2;
 
 import hudson.EnvVars;
 import hudson.Extension;
@@ -169,7 +169,7 @@ public class GrypeScannerStep extends Builder implements SimpleBuildStep
     }
 
     @Override
-    public boolean configure(StaplerRequest req, JSONObject json) throws FormException
+    public boolean configure(StaplerRequest2 req, JSONObject json) throws FormException
     {
       req.bindJSON(this, json);
       save();
